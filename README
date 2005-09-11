@@ -1,12 +1,12 @@
-$Id: README 21 2005-09-10 14:00:30Z kentaro $
+$Id: README 25 2005-09-11 09:48:14Z kentaro $
 
-Class-AutoAccess-Deep version 0.01
+Class-AutoAccess-Deep version 0.02
 ==================================
 
 DESCRIPTION
 
 Class::AutoAccess::Deep is the base class for automated accessors implementation.
-You can access deep inside the fields to call the method named joining the object
+You can access deep inside the object fields to call the method named joining the object
 field name with '->' operator.
 
 INSTALLATION

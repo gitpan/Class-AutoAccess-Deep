@@ -1,4 +1,4 @@
-#$Id: Deep.pm 22 2005-09-10 14:48:45Z kentaro $
+#$Id: Deep.pm 25 2005-09-11 09:48:14Z kentaro $
 
 package Class::AutoAccess::Deep;
 
@@ -7,7 +7,7 @@ use strict;
 use Carp ();
 
 our $AUTOLOAD;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my ($class, $fields) = @_;
@@ -64,7 +64,9 @@ __END__
 
 =head1 NAME
 
-Class::AutoAccess::Deep - automatically creates the accessors reach deep inside the fields
+Class::AutoAccess::Deep - automatically creates the accessors reach deep inside the field
+
+
 =head1 SYNOPSIS
 
   package MyClass;
@@ -102,9 +104,11 @@ Class::AutoAccess::Deep - automatically creates the accessors reach deep inside 
 
 =head1 DESCRIPTION
 
-Class::AutoAccess::Deep is the base class for automated accessors implementation. You can access deep inside the fields to call the method named by joining the object field name with '->' operator.
+Class::AutoAccess::Deep is the base class for automated accessors implementation. You can access deep inside the object fields to call the method named by joining the object field name with '->' operator.
 
-=head1 new ( I<\%fields> )
+=head1 METHOD
+
+=head2 new ( I<\%fields> )
 
 =over 4
 
@@ -116,13 +120,13 @@ Creates and returns new object. It takes a hashref which is used to initialize t
 
 =head1 EXCEPTION
 
-When you attempt to access the undefined field, Class::AutoAccess::Deep object throws exception by Carp::croak.
+When you attempt to access the undefined field, Class::AutoAccess::Deep object throws exception using Carp::croak.
 
 =head1 TODO
 
 =over 4
 
-=item * Save the accessors which is called once into somewhere for performance reason
+=item * Store the accessors which is called once into somewhere for performance reason
 
 =back
 
